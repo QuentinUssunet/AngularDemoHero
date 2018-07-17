@@ -5,6 +5,7 @@ export class Hero {
     name: string;
     
     constructor(name?: string) {
+        
         this.id = Hero.ID_COUNT++;
         this.name = name;
     }

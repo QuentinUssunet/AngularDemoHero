@@ -1,4 +1,19 @@
 <h1>{{ title }}</h1>
 <div>
-  <demo-heroes></demo-heroes>
+  <demo-heroes #heroesComp></demo-heroes>
+  <div class="hero-edit">
+    <h2>Ajouter nouveau Héro</h2>
+    <form #heroForm="ngForm" (ngSubmit)="validateHero($event, heroForm)">
+      <div style="display: inline-block">
+        <label for="name">Nom :</label>
+        <input id="name" name="name" #nameCtrl="ngModel" [(ngModel)]="newHeroName" required>
+        <span class="error" *ngIf="nameCtrl.invalid && nameCtrl.dirty">
+          Nom du héro obligatoire
+        </span>
+      </div>
+      <button [disabled]="!heroForm.valid">Valider</button>
+    </form>
+    Formulaire Valide ? {{ heroForm.valid }}
+  </div>
+  
 </div>

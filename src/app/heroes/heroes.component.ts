@@ -8,15 +8,12 @@ import { Hero } from '../hero';
 })
 export class HeroesComponent implements OnInit {
   heroes: Array<Hero>;
-
   constructor() {
     this.heroes = new Array();
   }
-
   ngOnInit() {
     this.heroes.push(new Hero('Link'));
     this.heroes.push(new Hero('Zelda'));
     this.heroes.push(new Hero('Tingle'));
   }
-
 }
