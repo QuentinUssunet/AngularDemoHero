@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Hero } from './hero';
 import { NgForm } from '../../node_modules/@angular/forms';
 import { HeroesComponent } from './heroes/heroes.component';
+import { HeroService } from './hero.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ export class AppComponent {
   newHeroName: string;
   @ViewChild(HeroesComponent)
   heroesComponent: HeroesComponent;
-  constructor() {
+
+  constructor(private heroService: HeroService) {
     this.title = 'Tour Of Heroes';
     this.newHeroName = '';
   }
@@ -23,5 +25,9 @@ export class AppComponent {
     hero.name = this.newHeroName;
     this.heroesComponent.heroes.push(hero);
     form.resetForm();
+  }
+
+  ngOnInit() {
+    this.heroService.loadMock();
   }
 }

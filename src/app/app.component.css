@@ -1,0 +1,11 @@
+div.hero-edit{
+    margin-left: 35%;
+    margin-top: 5%;
+    text-align: center;
+    border: 1px solid black;
+    width: 30%;
+}
+
+#name {
+    margin: 4px;
+}

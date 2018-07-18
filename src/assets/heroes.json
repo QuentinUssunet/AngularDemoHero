@@ -1,0 +1,24 @@
+[
+    {
+        "id": 0,
+        "name": "Link"
+    },{
+        "id": 1,
+        "name": "Zelda"
+    },{
+        "id": 2,
+        "name": "Ganon"
+    },{
+        "id": 3,
+        "name": "Spiderman"
+    },{
+        "id": 4,
+        "name": "Batman"
+    },{
+        "id": 5,
+        "name": "GreenLantern"
+    },{
+        "id": 6,
+        "name": "Quentin"
+    }
+]
